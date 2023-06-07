@@ -1,11 +1,60 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<title id="title">0xVoid</title>
 <body>
     <div id="root">
-        <div class="section" id="the void" style="background-color: rgb(0, 0, 0);"><div class="section-content section-void"><div class="the-void"><p class="the-void-title" data-text="welcome to the void" style="color: rgb(255, 255, 255);">welcome to the void</p></div></div></div>
+        <div class="section" id="the-void" style="background-color: rgb(0, 0, 0);">
+            <div class="section-content section-void">
+                <div class="the-void">
+                    <p class="the-void-title" data-text="welcome to the void" style="color: rgb(255, 255, 255);">welcome to the void</p>
+                    <div class="social-icons">
+                        <!-- Add your social media icons here -->
+                        <a href="https://github.com/dmonskull"><i class="fa fa-github"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
-
 <style>
-    
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    color: white;
+    font-size: 20px;
+}
+
+.social-icons a:hover {
+    max-height: fit-content;
+    color: gray;
+    filter: drop-shadow(0 0 10px rgb(189, 0, 247));
+  animation: breathing 3s ease-in-out infinite;
+}
+
+.fa {
+  padding: 10px;
+  font-size: 30px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
+
+@keyframes breathing {
+  0% {
+    filter: drop-shadow(0 0 0 rgb(189, 0, 247));
+  }
+  50% {
+    filter: drop-shadow(0 0 10px rgb(189, 0, 247));
+  }
+  100% {
+    filter: drop-shadow(0 0 0 rgb(189, 0, 247));
+  }
+}
 
     element.style {
     background-color: rgb(0, 0, 0);
@@ -432,3 +481,16 @@ html {
 /*# sourceMappingURL=main.62636b11.chunk.css.map */
 
 </style>
+<script>
+    var titles = ["0", "0x", "0xV", "0xVo", "0xVoi", "0xVoid"]; // Array of titles
+    var currentIndex = 0;
+
+    // Function to change the tab title
+    function changeTitle() {
+      document.getElementById("title").innerHTML = titles[currentIndex];
+      currentIndex = (currentIndex + 1) % titles.length;
+    }
+
+    // Change the title every 1 second (1000 milliseconds)
+    setInterval(changeTitle, 1000);
+  </script>
